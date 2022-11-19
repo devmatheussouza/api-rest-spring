@@ -27,10 +27,13 @@ public class Paciente {
     private String email;
     private String telefone;
 
+    private Boolean ativo;
+
     @Embedded
     private Endereco endereco;
 
     public Paciente(DadosCadastroPaciente dados) {
+        this.ativo = true;
         this.nome = dados.nome();
         this.email = dados.email();
         this.cpf = dados.cpf();
